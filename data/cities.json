@@ -71,18 +71,6 @@
         "lat": "39.774115132911135",
         "lng": "32.893064763397106"
       }
-    },
-    {
-      "id": "91c4",
-      "cityName": "Cihanbeyli",
-      "country": "Turkiye",
-      "emoji": "🇹🇷",
-      "date": "2025-04-24T14:41:20.972Z",
-      "notes": "hayriki hay diki hevnoki",
-      "position": {
-        "lat": "38.65545489984475",
-        "lng": "32.92259210714837"
-      }
     }
   ]
 }
