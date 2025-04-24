@@ -13,19 +13,19 @@ import { useCities } from "../contexts/CitiesContext";
 import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
 import { useGeolocation } from "../hooks/useGeolocation";
 import Button from "./Button";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 polyfillCountryFlagEmojis();
 
 function Map() {
   const { cities } = useCities();
   const [mapPosition, setMapPosition] = useState([40, 0]);
-  const [searchParams] = useSearchParams();
   const {
     isLoading: isLoadingPosition,
     position: geolacationPosition,
     getPosition,
   } = useGeolocation();
-  const mapLat = searchParams.get("lat");
-  const mapLng = searchParams.get("lng");
+  const [mapLat, mapLng] = useUrlPosition();
+
   useEffect(
     function () {
       if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
@@ -81,7 +81,7 @@ function ChangeCenter({ position }) {
 function DetectClick() {
   const navigate = useNavigate();
   useMapEvents({
-    click: (e) => navigate(`form?lat=${e.latlng.lat}?lng=${e.latlng.lng}`),
+    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
   });
 }
 
