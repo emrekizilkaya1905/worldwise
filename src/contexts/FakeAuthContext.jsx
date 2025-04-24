@@ -1,11 +1,11 @@
-import { useContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 
-const AuthContext = useContext();
+const AuthContext = createContext();
 const initialState = {
   user: null,
   isAuthenticated: false,
 };
-function reducer(action, state) {
+function reducer(state, action) {
   switch (action.type) {
     case "login":
       return {
@@ -50,7 +50,8 @@ function AuthProvider({ children }) {
 function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined)
-    throw new Error("Context was used outside of AuthProvider");
+    throw new Error("useAuth must be used within an AuthProvider");
+  return context;
 }
 
 export { AuthProvider, useAuth };
