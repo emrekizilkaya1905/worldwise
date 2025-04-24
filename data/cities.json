@@ -61,15 +61,27 @@
       }
     },
     {
-      "id": "f1c2",
+      "id": "b533",
       "cityName": "Ankara",
       "country": "Turkiye",
       "emoji": "🇹🇷",
-      "date": "2025-04-24T14:39:40.597Z",
-      "notes": "ANkara ankara guzel ankara",
+      "date": "2025-04-24T17:17:14.983Z",
+      "notes": "aNKAR ANAKARARA",
       "position": {
-        "lat": "39.774115132911135",
-        "lng": "32.893064763397106"
+        "lat": "39.7741894077968",
+        "lng": "32.89306227676605"
+      }
+    },
+    {
+      "id": "106c",
+      "cityName": "Rome",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2025-04-24T17:29:12.002Z",
+      "notes": "ferrari",
+      "position": {
+        "lat": "41.88948724862286",
+        "lng": "12.480468724505034"
       }
     }
   ]
